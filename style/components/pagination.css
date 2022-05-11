@@ -1,0 +1,26 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+.pagination > *{
+    text-decoration: underline;
+    width: 25px;
+    height: 25px;
+    background-color: #b2bec3;
+    color: #2d3436;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+}
+.pagination > *.active{
+    background-color: #0984e3;
+}
+.pagination button{
+    background-color: transparent;
+}

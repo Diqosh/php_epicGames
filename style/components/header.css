@@ -1,0 +1,243 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    padding: 0 10px;
+
+    text-transform: uppercase;
+    background-color: #2A2A2A;
+
+    font-size: 0.7em;
+
+    color: #CCCCCC;
+
+    z-index: 50;
+}
+
+
+.leftNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+
+    gap: 20px;
+}
+.leftNav_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+@media (max-width: 800px){
+
+}
+.leftNav_menu > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.leftNav__item {
+    height: 100%;
+    padding: 0 10px;
+    position: relative;
+}
+.leftNav__item::after{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 100%;
+
+    bottom: 0;
+    transition: .2s;
+    background: #0078f2;
+}
+.leftNav__item:hover::after{
+    height: 5px;
+
+}
+.leftNav__item:hover{
+    color: #fff;
+
+}
+
+
+.leftNav img {
+    height: 100%;
+    width: auto;
+
+    max-height: 52px;
+}
+
+
+
+.rightNav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 40px;
+}
+@media (max-width: 800px){
+    .rightNav{
+        display: none;
+    }
+}
+.rightNav > *{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+.rightNav__item {
+    height: 100%;
+}
+.rightNav__item  img{
+    width: 20px;
+    filter: invert(83%) sepia(0%) saturate(12%) hue-rotate(220deg) brightness(104%) contrast(83%);
+}
+
+.rightNav__person{
+    position: relative;
+    margin-right: 7px;
+}
+.person__green-circle{
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #52971C;
+    bottom: 0;
+    right: 0;
+}
+
+/*----------burger------------*/
+.header__burger{
+    position: relative;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    display: none;
+
+
+}
+.header__burger:hover{
+    cursor: pointer;
+}
+
+.header__burger:after,
+.header__burger:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ffffff;
+
+    transition: .4s;
+}
+.header__burger:after{
+    top: 0;
+}
+.header__burger span{
+    position: absolute;
+    width: 100%;
+    background: #ffffff;
+    height: 1px;
+    left: 0;
+    top: 9px;
+}
+.header__burger:before{
+    bottom: 0;
+    transition: .4s;
+}
+@media (max-width: 800px){
+    body.lock{
+        overflow: hidden;
+    }
+    .header__burger{
+        display: flex;
+    }
+    .logo{
+        position: absolute;
+        top: 0;
+        left: 5px;
+        z-index: 4;
+    }
+    .header::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #2A2A2A;
+        z-index: 3;
+    }
+    .header__burger.active:before{
+        transform: rotate(45deg);
+        bottom: 9px;
+        transition: .4s;
+    }
+    .header__burger.active:after{
+        transform: rotate(-45deg);
+        top: 9px;
+
+        transition: .4s;
+    }
+    .header__burger.active span{
+        transform: scale(0);
+    }
+    .leftNav_menu{
+        position: fixed;
+        top: 50px;
+        right: 0;
+        height: 100%;
+        width: 0;
+        background-color: #2A2A2A;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        flex-basis: 30px;
+
+        transition: .4s;
+    }
+
+    .leftNav_menu.active{
+        width: 80%;
+        transition: .4s;
+    }
+
+    .leftNav__item::after  {
+        display: none;
+    }
+    .leftNav__item{
+        flex-basis: 35px;
+        width: 100%;
+        padding-left: 25px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #4d4d4d;
+
+    }
+
+
+
+
+}

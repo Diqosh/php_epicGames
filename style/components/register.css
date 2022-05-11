@@ -1,0 +1,67 @@
+.register__wrapper {
+    width: 470px;
+
+    background-color: #202020;
+    padding: 50px 55px;
+    margin: 30px auto;
+    border-radius: 5px;
+
+}
+.register__wrapper input{
+    width: 100%;
+    height: 60px;
+    background-color: #202020;
+    border: 1px solid #9f9d9d;
+    border-radius: 5px ;
+    padding-left: 20px;
+
+}
+.register__wrapper button{
+    width: 100%;
+    height: 60px;
+    background-color: #0074E4;
+    border-radius: 5px;
+}
+::placeholder{
+    color: #fff;
+}
+.register__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.register__logo {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 30px;
+}
+.register__logo img{
+    max-width: 100%;
+}
+
+.register__country {
+}
+
+.register__full-name {
+    display: flex;
+    gap: 20px;
+}
+
+
+.register__special-mail,
+.register__conditions {
+    display: flex;
+    align-items: center;
+}
+input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
