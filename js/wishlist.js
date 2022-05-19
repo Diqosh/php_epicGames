@@ -18,11 +18,10 @@ function add_wishlist(id){
 //     }
 // }
 function remove_wishlist(e, id){
-    console.log("tut1")
+
     axios.post(BASE_URL + "/api/basket/delete.php",{
         basket_id: id
     }).then(res =>{
-        console.log("tut2")
         console.log(res.data)
     })
     e.target.parentElement.parentElement.parentElement.parentElement.style.display = "none"

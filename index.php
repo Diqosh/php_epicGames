@@ -91,6 +91,7 @@ $count = mysqli_fetch_assoc($query_count);
         <div class="primaryNavigation__news">News</div>
     </div>
     <div class="primaryNavigation__right">
+        <div class="primaryNavigation__wishlist"><a href="pages/add_game.php">add game</a></div>
         <div class="primaryNavigation__wishlist"><a href="pages/wishlist.php">Wishlist</a></div>
         <div class="primaryNavigation__cart">Cart</div>
     </div>
